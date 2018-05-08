@@ -1,0 +1,8 @@
+//Controller 
+
+ public function treeIndex()
+    {
+        $first_tree = User::where('position', Auth::user()->id)->get();
+       return view('fonts.marketing.my_tree', compact( 'first_tree'));
+
+    }
